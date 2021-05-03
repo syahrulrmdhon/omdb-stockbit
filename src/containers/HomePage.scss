@@ -1,0 +1,28 @@
+input {
+  z-index: 0;
+  width: 65%;
+  height: 50px;
+  border-radius: 5px;
+  background: #fff;
+  border: 2px solid #f1f3f4;
+  &:focus {
+    outline: none; /*by default,input shows an outline on focus */
+  }
+}
+.fa-search {
+  position: absolute;
+  margin-top: 19px;
+  margin-left: 20px;
+  color: #8e99a4;
+}
+.search {
+  color: #8e99a4;
+  font-weight: 400;
+  padding-left: 50px;
+  font-size: 18px;
+  z-index: 3;
+}
+
+.card-container {
+  margin: 5%;
+}
