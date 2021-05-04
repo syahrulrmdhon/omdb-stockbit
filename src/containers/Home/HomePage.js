@@ -2,9 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Row, Col, Button } from "reactstrap";
 import "./HomePage.scss";
-import { getListHome, resetList } from "../actions/listHomeAction";
-import CardMovie from "../components/CardMovie";
-import ModalImage from "../components/ModalImage";
+import { getListHome, resetList } from "../../actions/listHomeAction";
+import CardMovie from "../../components/CardMovie/CardMovie";
+import ModalImage from "../../components/ModalImage/ModalImage";
 
 const HomePage = () => {
   const dispatch = useDispatch();

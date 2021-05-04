@@ -4,7 +4,7 @@ import { Jumbotron, Col } from "reactstrap";
 const CardDetailMovie = ({ item }) => {
   return (
     <Col md={12}>
-      <Jumbotron>
+      <Jumbotron data-testid="jumbotron">
         <img alt="jumbo-poster" src={item.Poster}></img>
         <h2>{item.Title}</h2>
         <p className="lead">{item.Year}</p>

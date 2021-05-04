@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Row } from "reactstrap";
 import { getDetailMovie } from "../actions/listHomeAction";
-import CardDetailMovie from "../components/CardDetailMovie";
+import CardDetailMovie from "../components/CardDetailMovie/CardDetailMovie";
 
 const DetailMoviePage = ({ match }) => {
   const { params } = match;

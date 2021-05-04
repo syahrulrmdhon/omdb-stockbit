@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
-import HomePage from "./containers/HomePage";
+import HomePage from "./containers/Home/HomePage";
 import DetailMoviePage from "./containers/DetailMoviePage";
 
 function App() {
