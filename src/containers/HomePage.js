@@ -63,14 +63,14 @@ const HomePage = () => {
       <Row>
         {showAnswers && (
           <Col md={12}>
-            {/* <iframe
+            <iframe
               title="Answer #1"
               width="80%"
               height="400"
               src="//jsfiddle.net/cobasky/cgjbt06L/embedded/js/dark/"
               allowFullScreen="allowfullscreen"
               frameBorder="0"
-            ></iframe> */}
+            ></iframe>
           </Col>
         )}
         <Col md={12}>
