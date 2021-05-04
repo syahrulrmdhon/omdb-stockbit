@@ -6,7 +6,7 @@ const CardDetailMovie = ({ item }) => {
     <Col md={12}>
       <Jumbotron>
         <img alt="jumbo-poster" src={item.Poster}></img>
-        <h2>{item.title}</h2>
+        <h2>{item.Title}</h2>
         <p className="lead">{item.Year}</p>
         <hr className="my-2" />
         <p>
