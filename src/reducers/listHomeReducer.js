@@ -1,6 +1,7 @@
 const defaultState = {
   loading: false,
   data: [],
+  totalResults: "",
   errorMsg: "",
 };
 
@@ -21,7 +22,8 @@ const listHomeReducer = (state = defaultState, action) => {
       return {
         ...state,
         loading: false,
-        data: action.payload,
+        data: action.payload ? action.payload.Search : [],
+        totalResults: action.payload ? action.payload.totalResults : "",
         errorMsg: "",
       };
     default:

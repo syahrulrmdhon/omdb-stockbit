@@ -10,16 +10,17 @@ import {
   Button,
 } from "reactstrap";
 
-const CardMovie = ({ item }) => {
+const CardMovie = ({ item, setShow, setSrc }) => {
   const containerCardStyle = {
     margin: "10px 0",
   };
   const cardStyle = {
     borderRadius: "10px",
-  }
+  };
   const cardImgStyle = {
     width: "200px",
     margin: "0 auto",
+    cursor: "pointer",
   };
   return (
     <Col md={3} style={containerCardStyle}>
@@ -29,6 +30,10 @@ const CardMovie = ({ item }) => {
           src={item.Poster}
           style={cardImgStyle}
           alt="Card image cap"
+          onClick={() => {
+            setShow(true);
+            setSrc(item.Poster);
+          }}
         />
         <CardBody>
           <CardTitle tag="h5">{item.Title}</CardTitle>
@@ -36,7 +41,7 @@ const CardMovie = ({ item }) => {
             {item.Year}
           </CardSubtitle>
           <CardText>{item.imdbID}</CardText>
-          <Button>See Details</Button>
+          <Button color="info">See Details</Button>
         </CardBody>
       </Card>
     </Col>
