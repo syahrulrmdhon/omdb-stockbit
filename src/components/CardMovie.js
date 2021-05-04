@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Col,
   Card,
@@ -10,7 +11,7 @@ import {
   Button,
 } from "reactstrap";
 
-const CardMovie = ({ item, setShow, setSrc }) => {
+const CardMovie = ({ item, setShow, setSrc, id, columnCount }) => {
   const containerCardStyle = {
     margin: "10px 0",
   };
@@ -23,7 +24,7 @@ const CardMovie = ({ item, setShow, setSrc }) => {
     cursor: "pointer",
   };
   return (
-    <Col md={3} style={containerCardStyle}>
+    <Col md={columnCount} style={containerCardStyle}>
       <Card style={cardStyle}>
         <CardImg
           top
@@ -41,7 +42,9 @@ const CardMovie = ({ item, setShow, setSrc }) => {
             {item.Year}
           </CardSubtitle>
           <CardText>{item.imdbID}</CardText>
-          <Button color="info">See Details</Button>
+          <Link to={`/detail-movie/${id}`}>
+            <Button color="info">See Details</Button>
+          </Link>
         </CardBody>
       </Card>
     </Col>

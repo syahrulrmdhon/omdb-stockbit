@@ -19,3 +19,16 @@ export const getListHome = ({ page, search }) => async (dispatch) => {
     });
   }
 };
+
+export const getDetailMovie = (id) => async (dispatch) => {
+  dispatch({
+    type: "DETAIL_MOVIE",
+    id,
+  });
+};
+
+export const resetList = () => async (dispatch) => {
+  dispatch({
+    type: "RESET_LIST_MOVIE",
+  });
+};

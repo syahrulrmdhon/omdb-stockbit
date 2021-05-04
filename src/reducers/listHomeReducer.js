@@ -1,6 +1,7 @@
 const defaultState = {
   loading: false,
   data: [],
+  dataDetail: {},
   totalResults: "",
   errorMsg: "",
 };
@@ -19,11 +20,27 @@ const listHomeReducer = (state = defaultState, action) => {
         errorMsg: "Unable to get the List",
       };
     case "MOVIE_LIST_SUCCESS":
+      const payload = action.payload ? action.payload.Search : [];
       return {
         ...state,
         loading: false,
-        data: action.payload ? action.payload.Search : [],
+        data: [...state.data, ...payload],
         totalResults: action.payload ? action.payload.totalResults : "",
+        errorMsg: "",
+      };
+    case "DETAIL_MOVIE":
+      return {
+        ...state,
+        loading: false,
+        data: state.data,
+        dataDetail: state.data[action.id],
+      };
+    case "RESET_LIST_MOVIE":
+      return {
+        ...state,
+        loading: false,
+        data: [],
+        totalResults: "",
         errorMsg: "",
       };
     default:
